@@ -3,9 +3,11 @@
 
   export interface SidebarMobileLinkProps {
     href: string;
+    icon: string;
+    title: string;
   }
 
-  const { href } = defineProps<SidebarMobileLinkProps>();
+  const { href, icon, title } = defineProps<SidebarMobileLinkProps>();
 
   const isActive = computed(() => String(route.path) === href);
 </script>
@@ -16,6 +18,7 @@
     class="flex relative items-center space-x-2 w-full h-full inset-0 p-3"
     :class="[isActive ? 'text-white bg-zinc-900 border border-zinc-800 rounded-xl' : '']"
   >
-    <slot></slot>
+    <Icon :name="icon" color="white"/>
+    <span class="text-base">{{ title }}</span>
   </NuxtLink>
 </template>

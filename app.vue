@@ -10,7 +10,7 @@
   :root {
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
-    background: rgb(24, 24, 27);
+    background: #09090b;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Hanken Grotesk', sans-serif;
@@ -23,7 +23,7 @@
 
   body {
     color: white;
-    background: rgb(24, 24, 27);
+    background: #09090b;
     min-width: 320px;
   }
 </style>

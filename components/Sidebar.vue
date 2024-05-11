@@ -3,6 +3,43 @@
   const toggleSidebar = () => {
     sidebarOpened.value = !sidebarOpened.value
   }
+
+  const sidebarPages = [
+    {
+      href: "/",
+      icon: "material-symbols:home-outline",
+      title: "Início",
+    },
+    {
+      href: "/about",
+      icon: "material-symbols:account-circle",
+      title: "Sobre",
+    },
+    {
+      href: "/projects",
+      icon: "material-symbols:work-outline",
+      title: "Projetos",
+    },
+  ]
+
+  const sidebarLinks = [
+    {
+      href: "https://github.com/joaopugsley",
+      icon: "mdi:github",
+      title: "Github",
+    },
+    {
+      href: "https://www.linkedin.com/in/joaopugsley",
+      icon: "mdi:linkedin",
+      title: "LinkedIn",
+    },
+    {
+      href: "mailto:joaopugsleyy@gmail.com",
+      icon: "material-symbols:mail",
+      title: "E-Mail",
+    },
+  ]
+
 </script>
 
 <template>
@@ -26,63 +63,74 @@
     <h1 class="text-xl">JoãoPugsley</h1>
     <ul class="flex flex-col space-y-2 mt-4 text-zinc-400">
       <h3 class="text-base">Navegação</h3>
-      <SidebarMobileLink href="/">
-        <Icon name="material-symbols:home-outline" color="white"/>
-        <span class="text-base">Início</span>
-      </SidebarMobileLink>
-      <SidebarMobileLink href="/about">
-        <Icon name="material-symbols:account-circle" color="white"/>
-        <span class="text-base">Sobre</span>
-      </SidebarMobileLink>
-      <SidebarMobileLink href="/projects">
-        <Icon name="material-symbols:work-outline" color="white"/>
-        <span class="text-base">Projetos</span>
-      </SidebarMobileLink>
+      <SidebarMobileLink
+        v-for="page in sidebarPages"
+        :href="page.href"
+        :icon="page.icon"
+        :title="page.title"
+      />
     </ul>
     <ul class="flex flex-col space-y-2 mt-4 text-zinc-400">
       <h3 class="text-base">Social</h3>
-      <a
-        class="flex relative items-center space-x-2 w-full h-full inset-0 p-3"
-        href="https://github.com/joaopugsley"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="mdi:github" color="white"/>
-        <p class="text-base text-zinc-400 flex items-center w-full justify-between">
-          <span>
-            Github
-          </span>
-          <Icon name="tabler:external-link" color="text-zinc-400"/>
-        </p>
-      </a>
-      <a
-        class="flex relative items-center space-x-2 w-full h-full inset-0 p-3"
-        href="https://www.linkedin.com/in/joaopugsley"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="mdi:linkedin" color="white"/>
-        <p class="text-base text-zinc-400 flex items-center w-full justify-between">
-          <span>
-            LinkedIn
-          </span>
-          <Icon name="tabler:external-link" color="text-zinc-400"/>
-        </p>
-      </a>
-      <a
-        class="flex relative items-center space-x-2 w-full h-full inset-0 p-3"
-        href="mailto:joaopugsleyy@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon name="material-symbols:mail" color="white"/>
-        <p class="text-base text-zinc-400 flex items-center w-full justify-between">
-          <span>
-            E-Mail
-          </span>
-          <Icon name="tabler:external-link" color="text-zinc-400"/>
-        </p>
-      </a>
+      <SidebarMobileSocialMediaLink
+        v-for="link in sidebarLinks"
+        :href="link.href"
+        :icon="link.icon"
+        :title="link.title"
+      />
     </ul>
   </nav>
+
+  <!-- desktop -->
+  <nav
+    class="hidden md:flex fixed h-screen bg-zinc-950 shadow-xl border-r border-zinc-900 text-white text-xl z-10 transition-all duration-300 p-4"
+    :class="[sidebarOpened ? 'w-72' : 'w-24']"
+  >
+    <button
+      @click="toggleSidebar"
+      class="hidden md:flex absolute bg-zinc-900 border border-zinc-800 rounded-full -right-[15px] top-[calc(50vh-15px)] items-center justify-center p-1 transition-all duration-200 hover:brightness-150"
+    >
+      <Icon v-if="sidebarOpened" name="ic:round-keyboard-arrow-left" color="white"/>
+      <Icon v-else="sidebarOpened" name="ic:round-keyboard-arrow-right" color="white"/>
+    </button>
+
+    <div class="flex flex-col space-y-2 mt-4 w-full text-zinc-400">
+      <h3 v-if="sidebarOpened" class="text-base anim-fade">Navegação</h3>
+      <ul class="flex flex-col space-y-2 justify-center items-center w-full">
+        <SidebarDesktopLink
+          v-for="page in sidebarPages"
+          :href="page.href"
+          :icon="page.icon"
+          :title="page.title"
+          :opened="sidebarOpened"
+        />
+      </ul>
+      <h3 v-if="sidebarOpened" class="text-base anim-fade">Social</h3>
+      <hr v-else class="w-full border-zinc-800">
+      <ul class="flex flex-col space-y-2 justify-center items-center w-full">
+        <SidebarDesktopSocialMediaLink
+          v-for="link in sidebarLinks"
+          :href="link.href"
+          :icon="link.icon"
+          :title="link.title"
+          :opened="sidebarOpened"
+        />
+      </ul>
+    </div>
+  </nav>
 </template>
+
+<style lang="css">
+  .anim-fade {
+    animation: opacity-fade 300ms forwards linear;
+  }
+
+  @keyframes opacity-fade {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+</style>

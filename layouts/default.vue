@@ -1,6 +1,6 @@
 <template>
   <Sidebar/>
-  <main class="p-2">
+  <main class="p-2 md:pl-[104px]">
     <slot></slot>
   </main>
 </template>
