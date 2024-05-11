@@ -18,6 +18,11 @@
     :class="[opened ? 'w-full px-3 space-x-2' : 'justify-center w-12']"
   >
     <Icon :name="icon" class="text-2xl"/>
-    <span v-if="opened" class="text-base">{{ title }}</span>
+    <p v-if="opened" class="text-base w-full flex justify-between">
+      <span>
+        {{ title }}
+      </span>
+      <Icon name="tabler:external-link" color="text-zinc-400"/>
+    </p>
   </a>
 </template>
