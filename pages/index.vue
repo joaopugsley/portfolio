@@ -29,11 +29,7 @@
         </a>
       </div>
     </section>
-    <section class="w-full z-10 mt-10">
-      <h2 class="text-2xl">Habilidades</h2>
-      <Skills/>
-    </section>
-    <section class="w-full z-10 mt-10">
+    <section class="w-full z-10 mt-12">
       <h2 class="text-2xl">Projetos em destaque</h2>
       <HighlightedProjects/>
     </section>
