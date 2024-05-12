@@ -1,75 +1,36 @@
-# Nuxt 3 Minimal Starter
+## joaopugsley - `(portfolio)`
+- Você pode **acessar** esse portfólio clicando <a href="https://joaopugsley.dev">aqui</a>.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Stack: 👨‍💻
+- <a href="https://www.typescriptlang.org/">TypeScript</a> - Linguagem de programação fortemente tipada que se baseia em JavaScript.
+- <a href="https://nuxt.com/">Nuxt</a> - Framework Vue para criação de aplicações web full-stack.
+- <a href="https://tailwindcss.com/">TailwindCSS</a> - Framework CSS inline usado para a estilização do portfólio.
 
-## Setup
+## License: 📃
+- This portfolio is available under the ``MIT License``. See the <a href="https://github.com/joaopugsley/portfolio/blob/main/LICENSE">LICENSE</a> file for more info.
 
-Make sure to install the dependencies:
-
+## Iniciando o projeto: 🔧
+⚠ Certifique-se de ter o <a href="https://nodejs.org/">Node.js</a> instalado na sua `máquina` ou `ambiente de execução` ⚠
+- Clone esse repositório:
 ```bash
-# npm
+git clone https://github.com/joaopugsley/portfolio
+```
+- Acesse o diretório do repositório & configure as variáveis de ambiente:
+```bash
+cd portfolio
+```
+- Instale os módulos necessários:
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+- Rode o projeto
 ```bash
-# npm
-npm run dev
+# development
+$ npm run dev
 
-# pnpm
-pnpm run dev
+# build
+$ npm run build
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# start
+$ npm run start
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
