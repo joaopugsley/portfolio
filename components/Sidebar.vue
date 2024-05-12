@@ -47,7 +47,7 @@
   <!-- mobile -->
   <button
     @click="toggleSidebar"
-    class="flex fixed md:hidden z-30 items-center gap-2 text-white bg-zinc-900 border border-zinc-800 rounded-xl p-3 hover:brightness-125 transition-all bottom-4 left-4"
+    class="flex fixed md:hidden z-40 items-center gap-2 text-white bg-zinc-900 border border-zinc-800 rounded-xl p-3 hover:brightness-125 transition-all bottom-4 left-4"
   >
     <Icon 
       name="ic:outline-keyboard-command-key"
@@ -57,7 +57,7 @@
 
   <!-- mobile -->
   <nav 
-    class="flex flex-col space-y-2 fixed md:hidden h-screen w-4/5 p-4 bg-zinc-950 text-white text-xl transition-all ease-in-out duration-300 z-20 overflow-auto"
+    class="flex flex-col space-y-2 fixed md:hidden h-screen w-4/5 p-4 bg-zinc-950 text-white text-xl transition-all ease-in-out duration-300 z-30 overflow-auto"
     :class="[sidebarOpened ? 'translate-x-0' : '-translate-x-full']"
   >
     <h1 class="text-xl">JoãoPugsley</h1>
@@ -83,7 +83,7 @@
 
   <!-- desktop -->
   <nav
-    class="hidden md:flex fixed h-screen bg-zinc-950 shadow-xl border-r border-zinc-900 text-white text-xl z-10 transition-all duration-300 p-4"
+    class="hidden md:flex fixed h-screen bg-zinc-950 shadow-xl border-r border-zinc-900 text-white text-xl z-20 transition-all duration-300 p-4"
     :class="[sidebarOpened ? 'w-72' : 'w-24']"
   >
     <button
