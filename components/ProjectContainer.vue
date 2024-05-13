@@ -1,6 +1,13 @@
 <script setup lang="ts">
   const projects = [
     {
+      image: "/images/projects/portfolio.png",
+      title: "JOAOPUGSLEY - PORTFÓLIO",
+      description: "Esse portfólio é open-source! Considere deixar uma estrela ⭐ no GitHub.",
+      live_url: "https://joaopugsley.dev",
+      source_code: "https://github.com/joaopugsley/portfolio",
+    },
+    {
       image: "/images/projects/howtocs2.png",
       title: "HOWTOCS2 - Blog",
       description: "Portal de informações sobre o Counter Strike brasileiro.",
