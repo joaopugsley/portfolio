@@ -54,13 +54,13 @@
     </div>
 
     <!-- desktop -->
-    <div class="hidden md:flex flex-col w-full bg-zinc-950 duration-300 group-hover:-translate-y-[30%] border-t border-zinc-800 text-white">
+    <div class="hidden md:flex flex-col w-full bg-zinc-950 duration-300 md:group-hover:-translate-y-[20%] lg:group-hover:-translate-y-[40%] 2xl:group-hover:-translate-y-[30%] border-t border-zinc-800 text-white">
       <div class="w-full p-6 h-28">
         <div class="flex flex-col w-full">
           <h2 class="text-base xl:text-xl">
             {{ title }}
           </h2>
-          <p class="text-xs lg:text-base text-zinc-400">
+          <p class="text-sm text-zinc-400">
             {{ description }}
           </p>
         </div>

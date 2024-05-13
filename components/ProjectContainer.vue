@@ -38,7 +38,7 @@
 </script>
 
 <template>
-  <ul class="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-full">
+  <ul class="mt-2 grid grid-cols-1 lg:grid-cols-2 gap-4 w-full h-full">
     <Project
       v-for="project in projects"
       :image="project.image"
