@@ -22,6 +22,12 @@
       source_code: "https://github.com/joaopugsley/twitchroulette",
     },
     {
+      image: "/images/projects/kava.png",
+      title: "KAVA (Back-end)",
+      description: "Um clone do Redis desenvolvido em Rust, oferecendo alto-desempenho e confiabilidade.",
+      source_code: "https://github.com/joaopugsley/kava",
+    },
+    {
       image: "/images/projects/steam-tools.png",
       title: "SteamTools",
       description: "Ferramentas que podem ser úteis na utilização da Steam.",
