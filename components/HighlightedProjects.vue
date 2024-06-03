@@ -1,20 +1,6 @@
 <script setup lang="ts">
-  const highlightedProjects = [
-    {
-      image: "/images/projects/howtocs2.png",
-      title: "HOWTOCS2 - Blog",
-      description: "Portal de informações sobre o Counter Strike brasileiro.",
-      live_url: "https://howtocs2.com",
-      source_code: "https://github.com/joaopugsley/howtocs2",
-    },
-    {
-      image: "/images/projects/twitchroulette.png",
-      title: "TwitchRoulette",
-      description: "Realização de sorteios na twitch.tv de maneira fácil, prática e eficaz.",
-      live_url: "https://twitchroulette.live",
-      source_code: "https://github.com/joaopugsley/twitchroulette",
-    },
-  ]
+  import { projects } from "@/utils/constants";
+  const highlightedProjects = projects.slice(0, 2);
 </script>
 
 <template>
