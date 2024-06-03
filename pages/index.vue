@@ -31,12 +31,12 @@
     </section>
     <section class="w-full z-10 mt-12">
       <div class="flex flex-row items-center justify-between">
-        <h2 class="text-2xl">Projetos em destaque</h2>
+        <h2 class="text-xl sm:text-2xl">Projetos em destaque</h2>
         <NuxtLink
           to="/projects"
-          class="px-3 py-1 rounded-lg bg-zinc-900 text-white text-xl border border-zinc-800 hover:brightness-150 transition-all duration-200 space-x-1 flex items-center"
+          class="px-2 sm:px-3 py-1 rounded-lg bg-zinc-900 text-white text-xl border border-zinc-800 hover:brightness-150 transition-all duration-200 space-x-1 flex items-center"
         >
-          <span class="font-semibold text-base">
+          <span class="font-normal sm:font-semibold text-base">
             Ver Mais
           </span>
           <Icon name="ic:round-keyboard-arrow-right"/>
